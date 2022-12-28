@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
@@ -20,7 +17,7 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(Skill t)
         {
-            throw new NotImplementedException();
+            _skillDal.Insert(t);
         }
 
         public void TDelete(Skill t)
