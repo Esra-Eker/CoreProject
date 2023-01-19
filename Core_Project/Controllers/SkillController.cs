@@ -10,6 +10,9 @@ namespace Core_Project.Controllers
         SkillManager skillManager = new SkillManager(new EfSkillDal());
         public IActionResult Index()
         {
+            ViewBag.v1 = "Yetenek Listesi";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenek Listesi";
             var values = skillManager.TGetList();
             return View(values);
         }
@@ -17,7 +20,9 @@ namespace Core_Project.Controllers
         [HttpGet]
         public IActionResult AddSkill()
         {
-            ViewBag.d1 = "Ekleme";
+            ViewBag.v1 = "Yetenek Ekleme";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenek Ekleme";
             return View();
         }
 
