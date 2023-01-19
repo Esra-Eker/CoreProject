@@ -17,6 +17,7 @@ namespace Core_Project.Controllers
         [HttpGet]
         public IActionResult AddSkill()
         {
+            ViewBag.d1 = "Ekleme";
             return View();
         }
 
