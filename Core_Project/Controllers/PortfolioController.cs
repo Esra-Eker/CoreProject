@@ -10,6 +10,9 @@ namespace Core_Project.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.v1 = "Proje Listesi";
+            ViewBag.v2 = "Projelerim";
+            ViewBag.v3 = "Proje Listesi";
             var values = portfolioManager.TGetList();
             return View(values);
         }
