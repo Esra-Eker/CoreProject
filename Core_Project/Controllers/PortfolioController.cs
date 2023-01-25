@@ -30,7 +30,14 @@ namespace Core_Project.Controllers
         [HttpPost]
         public IActionResult AddPortfolio(Portfolio portfolio)
         {
-            portfolioManager.TAdd(portfolio);
+            if (portfolio.Name != null && portfolio.ImageUrl != "" && portfolio.Name.Length >= 5 && portfolio.Name.Length <= 100)
+            {
+                portfolioManager.TAdd(portfolio);
+            }
+            else
+            {
+                //hata mesajı
+            }
             return RedirectToAction("Index");
         }
     }
