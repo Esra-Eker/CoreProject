@@ -12,13 +12,15 @@ namespace BusinessLayer.Concrete
     public class PortfolioManager : IPortfolioService
     {
         private IPortfolioDal _portfolioDal;
+
         public PortfolioManager(IPortfolioDal portfolioDal)
         {
             _portfolioDal = portfolioDal;
         }
+
         public void TAdd(Portfolio t)
         {
-            throw new NotImplementedException();
+            _portfolioDal.Insert(t);
         }
 
         public void TDelete(Portfolio t)
