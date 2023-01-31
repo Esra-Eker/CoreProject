@@ -12,7 +12,7 @@ namespace Core_Project.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            ViewBag.v1 = "Düzenleme";
+            ViewBag.v1 = "Çne Çıkan Post Düzenleme";
             ViewBag.v2 = "Öne Çıkanlar";
             ViewBag.v3 = "Öne Çıkan Sayfası";
             var values = featureManager.TGetByID(1);
