@@ -11,12 +11,12 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int UserID { get; set; }
-        public int Name { get; set; }
-        public int Surname { get; set; }
-        public int UserName { get; set; }
-        public int Mail { get; set; }
-        public int Password { get; set; }
-        public int ImageUrl { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string UserName { get; set; }
+        public string Mail { get; set; }
+        public string Password { get; set; }
+        public string ImageUrl { get; set; }
         public bool Status { get; set; }
         public List<UserMessage> UserMessage { get; set; }
     }
