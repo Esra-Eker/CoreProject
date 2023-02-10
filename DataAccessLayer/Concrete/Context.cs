@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccessLayer.Concrete
 {
     // 1) Bağlantı stringini tutacak.
     // 2) Veritabanına yansıtılacak olan tabloları tutacak.
-    public class Context : DbContext
+    public class Context : IdentityDbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
