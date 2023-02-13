@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 
 namespace Core_Project
 {
@@ -23,6 +25,8 @@ namespace Core_Project
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>();
+            services.AddIdentity<WriterUser, WriterRole>().AddEntityFrameworkStores<Context>();
             services.AddControllersWithViews();
         }
 

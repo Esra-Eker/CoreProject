@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Core_Project.Areas.User.Models.UserRegisterViewModel
+
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -33,42 +35,46 @@
                             <div class="brand-logo">
                                 <img src="~/skydash/images/logo.svg" alt="logo">
                             </div>
-                            <h4>New here?</h4>
-                            <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
-                            <form class="pt-3">
+                            <h4>Buralarda yeni misin?</h4>
+                            <h6 class="font-weight-light">Hadi gel kaydını yapalım!</h6>
+                            <form class="pt-3" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Username">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-control form-control-lg" id="exampleFormControlSelect2">
-                                        <option>Country</option>
-                                        <option>United States of America</option>
-                                        <option>United Kingdom</option>
-                                        <option>India</option>
-                                        <option>Germany</option>
-                                        <option>Argentina</option>
-                                    </select>
+                                    <label>Adınız</label>
+                                    <span asp-vaidation-for="Name" class="text-danger"></span>
+                                    <input type="text" asp-for="Name" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                                    <label>Adınız</label>
+                                    <span asp-vaidation-for="Surname" class="text-danger"></span>
+                                    <input type="text" asp-for="Surname" class="form-control" />
                                 </div>
-                                <div class="mb-4">
-                                    <div class="form-check">
-                                        <label class="form-check-label text-muted">
-                                            <input type="checkbox" class="form-check-input">
-                                            I agree to all Terms & Conditions
-                                        </label>
-                                    </div>
+                                <div class="form-group">
+                                    <label>Görsel</label>
+                                    <span asp-vaidation-for="ImageUrl" class="text-danger"></span>
+                                    <input type="text" asp-for="ImageUrl" class="form-control" />
                                 </div>
+                                <div class="form-group">
+                                    <label>Şifreniz</label>
+                                    <span asp-vaidation-for="Password" class="text-danger"></span>
+                                    <input type="text" asp-for="Password" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Şifre Tekrar</label>
+                                    <span asp-vaidation-for="ConfirmPassword" class="text-danger"></span>
+                                    <input type="text" asp-for="ConfirmPassword" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Mail adresiniz</label>
+                                    <span asp-vaidation-for="Mail" class="text-danger"></span>
+                                    <input type="text" asp-for="Mail" class="form-control" />
+                                </div>
+
                                 <div class="mt-3">
-                                    <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="~/skydash/index.html">SIGN UP</a>
+                                    <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" >Kayıt Ol</a>
                                 </div>
-                                <div class="text-center mt-4 font-weight-light">
+                                @*<div class="text-center mt-4 font-weight-light">
                                     Already have an account? <a href="login.html" class="text-primary">Login</a>
-                                </div>
+                                </div>*@
                             </form>
                         </div>
                     </div>
@@ -81,12 +87,12 @@
     <!-- container-scroller -->
     <!-- plugins:js -->
     <script src="~/skydash/vendors/js/vendor.bundle.base.js"></script>
-<!-- endinject -->
-<script src="~/skydash/js/off-canvas.js"></script>
-<script src="~/skydash/js/hoverable-collapse.js"></script>
-<script src="~/skydash/js/template.js"></script>
-<script src="~/skydash/js/settings.js"></script>
-<script src="~/skydash/js/todolist.js"></script>
+    <!-- endinject -->
+    <script src="~/skydash/js/off-canvas.js"></script>
+    <script src="~/skydash/js/hoverable-collapse.js"></script>
+    <script src="~/skydash/js/template.js"></script>
+    <script src="~/skydash/js/settings.js"></script>
+    <script src="~/skydash/js/todolist.js"></script>
 </body>
 
 </html>
