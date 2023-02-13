@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EntityLayer.Concrete;
+﻿using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +6,7 @@ namespace DataAccessLayer.Concrete
 {
     // 1) Bağlantı stringini tutacak.
     // 2) Veritabanına yansıtılacak olan tabloları tutacak.
-    public class Context : IdentityDbContext
+    public class Context : IdentityDbContext<WriterUser, WriterRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -31,5 +26,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<User> Users { get; set; }
         public DbSet<UserMessage> UserMessages { get; set; }
         public DbSet<ToDoList> ToDoLists { get; set; }
+        public DbSet<Test1> Test1s { get; set; }
     }
 }

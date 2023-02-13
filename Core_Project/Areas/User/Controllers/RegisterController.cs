@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Core_Project.Areas.User.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Project.Areas.User.Controllers
 {
@@ -12,8 +13,12 @@ namespace Core_Project.Areas.User.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(string p)
+        public IActionResult Index(UserRegisterViewModel p)
         {
+            if (ModelState.IsValid)
+            {
+
+            }
             return View();
         }
     }
