@@ -39,7 +39,7 @@ namespace Core_Project.Areas.User.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Register");
+                    return RedirectToAction("Index", "Login");
                 }
                 else
                 {
